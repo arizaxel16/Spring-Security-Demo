@@ -1,22 +1,19 @@
 package com.securitydemo.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Base64;
 
 @RestController
 @RequestMapping("/api")
-class AuthController {
+public class AuthController {
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password) {
         if (("user".equals(username) && "password".equals(password)) ||
                 ("admin".equals(username) && "adminpass".equals(password))) {
             String role = "user".equals(username) ? "USER" : "ADMIN";
             String token = Base64.getEncoder().encodeToString(
-                    ("{\"sub\": \"" + username + "\", \"role\": \"" + role + "\"}").getBytes()
+                    ("{\"sub\": \"" + username + "\", \"role\": \"ROLE_" + role + "\"}").getBytes()
             );
             return "Bearer " + token;
         }

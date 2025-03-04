@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-class DemoController {
+public class DemoController {
     @GetMapping("/user-endpoint")
     @PreAuthorize("hasRole('USER')")
     public String userAccess() {
