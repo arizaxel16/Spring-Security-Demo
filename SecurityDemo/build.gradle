@@ -23,11 +23,16 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.springframework:spring-test'
 
     implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
     implementation 'com.amazonaws:aws-lambda-java-events:3.11.2'
     implementation 'org.springframework.cloud:spring-cloud-function-adapter-aws:3.2.2'
     implementation 'org.springframework.cloud:spring-cloud-function-web:3.2.2'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+    implementation 'ch.qos.logback:logback-classic'
 
     runtimeOnly 'org.springframework.boot:spring-boot-starter-tomcat'
 
