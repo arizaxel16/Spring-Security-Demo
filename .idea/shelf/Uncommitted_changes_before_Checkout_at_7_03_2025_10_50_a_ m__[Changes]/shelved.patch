@@ -1,0 +1,192 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"46da91fb-2d38-43bc-ae35-e288e4420d85\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$/SecurityDemo\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <task path=\"$PROJECT_DIR$/SecurityDemo\">\r\n          <activation />\r\n        </task>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"SecurityDemo\" type=\"f1a62948:ProjectNode\" />\r\n              </path>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"SecurityDemo\" type=\"f1a62948:ProjectNode\" />\r\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\r\n              </path>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"SecurityDemo\" type=\"f1a62948:ProjectNode\" />\r\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\r\n                <item name=\"build\" type=\"c8890929:TasksNode$1\" />\r\n              </path>\r\n            </expand>\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2toUF9Csdx717vSRbFuGp4uOmTT\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Gradle.Build SecurityDemo.executor\": \"Run\",\r\n    \"Gradle.SecurityDemo [bootJar].executor\": \"Run\",\r\n    \"Gradle.SecurityDemo [build].executor\": \"Run\",\r\n    \"RequestMappingsPanelOrder0\": \"0\",\r\n    \"RequestMappingsPanelOrder1\": \"1\",\r\n    \"RequestMappingsPanelWidth0\": \"75\",\r\n    \"RequestMappingsPanelWidth1\": \"75\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"Spring Boot.SecurityDemoApplication.executor\": \"Run\",\r\n    \"git-widget-placeholder\": \"TestAWS\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"reference.settingsdialog.project.gradle\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\" selected=\"Gradle.SecurityDemo [bootJar]\">\r\n    <configuration name=\"SecurityDemo [bootJar]\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$/SecurityDemo\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\"bootJar\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <RunAsTest>false</RunAsTest>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"SecurityDemo [build]\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$/SecurityDemo\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\"build\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <RunAsTest>false</RunAsTest>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"SecurityDemoApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"SecurityDemo.main\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.securitydemo.SecurityDemoApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Gradle.SecurityDemo [bootJar]\" />\r\n        <item itemvalue=\"Gradle.SecurityDemo [build]\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"46da91fb-2d38-43bc-ae35-e288e4420d85\" name=\"Changes\" comment=\"\" />\r\n      <created>1741017817062</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1741017817062</updated>\r\n      <workItem from=\"1741017820895\" duration=\"89000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 2949cf7f4a4b83eb79c118bd493f996a60455bf4)
++++ b/.idea/workspace.xml	(date 1741356448768)
+@@ -5,8 +5,13 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="46da91fb-2d38-43bc-ae35-e288e4420d85" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/SecurityDemo/src/main/java/com/securitydemo/config/LambdaConfig.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/SecurityDemo/src/main/resources/application-lambda.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/SecurityDemo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/SecurityDemo/build.gradle" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/SecurityDemo/src/main/java/com/securitydemo/LambdaHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/SecurityDemo/src/main/java/com/securitydemo/handler/LambdaHandler.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/SecurityDemo/src/main/java/com/securitydemo/SecurityDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/SecurityDemo/src/main/java/com/securitydemo/SecurityDemoApplication.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/SecurityDemo/src/main/java/com/securitydemo/SpringApiGatewayRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/SecurityDemo/src/main/java/com/securitydemo/handler/SpringApiGatewayRequestHandler.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/SecurityDemo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SecurityDemo/src/main/resources/application.properties" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -64,6 +69,18 @@
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "lastFilter": {
++    "state": "OPEN",
++    "assignee": "Andrescampi"
++  }
++}]]></component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/arizaxel16/Spring-Security-Demo.git",
++    "accountId": "e2ff5c72-5091-4e36-8cbf-0a5220c0a405"
++  }
++}]]></component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 1
+ }</component>
+@@ -75,6 +92,7 @@
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+     "Gradle.Build SecurityDemo.executor": "Run",
++    "Gradle.Download Sources.executor": "Run",
+     "Gradle.SecurityDemo [bootJar].executor": "Run",
+     "Gradle.SecurityDemo [build].executor": "Run",
+     "RequestMappingsPanelOrder0": "0",
+@@ -85,17 +103,24 @@
+     "RunOnceActivity.git.unshallow": "true",
+     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+     "Spring Boot.SecurityDemoApplication.executor": "Run",
+-    "git-widget-placeholder": "TestAWS",
++    "git-widget-placeholder": "#1 on TestAWS",
+     "kotlin-language-version-configured": "true",
++    "node.js.detected.package.eslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
+     "node.js.selected.package.tslint": "(autodetect)",
+     "nodejs_package_manager_path": "npm",
+     "project.structure.last.edited": "Project",
+     "project.structure.proportion": "0.15",
+     "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
++    "settings.editor.selected.configurable": "spring",
+     "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
++  <component name="RecentsManager">
++    <key name="CreateClassDialog.RecentsKey">
++      <recent name="com.securitydemo" />
++    </key>
++  </component>
+   <component name="RunManager" selected="Gradle.SecurityDemo [bootJar]">
+     <configuration name="SecurityDemo [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+       <ExternalSystemSettings>
+@@ -158,8 +183,8 @@
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
++        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
++        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -172,10 +197,15 @@
+       <option name="presentableId" value="Default" />
+       <updated>1741017817062</updated>
+       <workItem from="1741017820895" duration="89000" />
++      <workItem from="1741236127732" duration="10406000" />
+     </task>
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="XSLT-Support.FileAssociations.UIState">
++    <expand />
++    <select />
++  </component>
+ </project>
+\ No newline at end of file
+Index: SecurityDemo/src/main/java/com/securitydemo/config/LambdaConfig.java
+===================================================================
+diff --git a/SecurityDemo/src/main/java/com/securitydemo/config/LambdaConfig.java b/SecurityDemo/src/main/java/com/securitydemo/config/LambdaConfig.java
+new file mode 100644
+--- /dev/null	(date 1741295819107)
++++ b/SecurityDemo/src/main/java/com/securitydemo/config/LambdaConfig.java	(date 1741295819107)
+@@ -0,0 +1,16 @@
++package com.securitydemo.config;
++
++import org.springframework.context.annotation.Bean;
++import org.springframework.context.annotation.Configuration;
++import org.springframework.context.annotation.Profile;
++import org.springframework.web.servlet.DispatcherServlet;
++
++@Configuration
++@Profile("lambda")
++public class LambdaConfig {
++
++    @Bean
++    public DispatcherServlet dispatcherServlet() {
++        return new DispatcherServlet();
++    }
++}
+\ No newline at end of file
+Index: SecurityDemo/src/main/java/com/securitydemo/SpringApiGatewayRequestHandler.java
+===================================================================
+diff --git a/SecurityDemo/src/main/java/com/securitydemo/SpringApiGatewayRequestHandler.java b/SecurityDemo/src/main/java/com/securitydemo/handler/SpringApiGatewayRequestHandler.java
+rename from SecurityDemo/src/main/java/com/securitydemo/SpringApiGatewayRequestHandler.java
+rename to SecurityDemo/src/main/java/com/securitydemo/handler/SpringApiGatewayRequestHandler.java
+--- a/SecurityDemo/src/main/java/com/securitydemo/SpringApiGatewayRequestHandler.java	(revision 2949cf7f4a4b83eb79c118bd493f996a60455bf4)
++++ b/SecurityDemo/src/main/java/com/securitydemo/handler/SpringApiGatewayRequestHandler.java	(date 1741292575659)
+@@ -1,4 +1,4 @@
+-package com.securitydemo;
++package com.securitydemo.handler;
+ 
+ import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent;
+ import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent;
+Index: SecurityDemo/src/main/java/com/securitydemo/LambdaHandler.java
+===================================================================
+diff --git a/SecurityDemo/src/main/java/com/securitydemo/LambdaHandler.java b/SecurityDemo/src/main/java/com/securitydemo/handler/LambdaHandler.java
+rename from SecurityDemo/src/main/java/com/securitydemo/LambdaHandler.java
+rename to SecurityDemo/src/main/java/com/securitydemo/handler/LambdaHandler.java
+--- a/SecurityDemo/src/main/java/com/securitydemo/LambdaHandler.java	(revision 2949cf7f4a4b83eb79c118bd493f996a60455bf4)
++++ b/SecurityDemo/src/main/java/com/securitydemo/handler/LambdaHandler.java	(date 1741296065809)
+@@ -1,9 +1,10 @@
+-package com.securitydemo;
++package com.securitydemo.handler;
+ 
+ import com.amazonaws.services.lambda.runtime.Context;
+ import com.amazonaws.services.lambda.runtime.RequestHandler;
+ import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent;
+ import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent;
++import com.securitydemo.SecurityDemoApplication;
+ import org.springframework.boot.SpringApplication;
+ import org.springframework.context.ConfigurableApplicationContext;
+ 
+@@ -14,13 +15,27 @@
+     private static ConfigurableApplicationContext applicationContext;
+     private static SpringApiGatewayRequestHandler requestHandler;
+ 
++    // Removing the static initializer as it might be causing issues
++
+     @Override
+     public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent input, Context context) {
+         try {
+             // Initialize Spring context if not already done
+             if (applicationContext == null) {
++                // Set lambda profile explicitly before starting the application
++                System.setProperty("spring.profiles.active", "lambda");
+                 applicationContext = SpringApplication.run(SecurityDemoApplication.class);
++
++                // Create the request handler
+                 requestHandler = new SpringApiGatewayRequestHandler(applicationContext);
++
++                System.out.println("Application started with profile: " +
++                        System.getProperty("spring.profiles.active"));
++            }
++
++            // Ensure requestHandler is not null before using it
++            if (requestHandler == null) {
++                throw new IllegalStateException("requestHandler was not properly initialized");
+             }
+ 
+             // Process the request through Spring

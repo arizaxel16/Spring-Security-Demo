@@ -1,0 +1,164 @@
+Index: SecurityDemo/src/main/java/com/securitydemo/SecurityDemoApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.securitydemo;\r\n\r\nimport com.securitydemo.filter.JwtAuthenticationFilter;\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\nimport org.springframework.context.annotation.Bean;\r\nimport org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;\r\nimport org.springframework.security.config.annotation.web.builders.HttpSecurity;\r\nimport org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;\r\nimport org.springframework.security.core.userdetails.User;\r\nimport org.springframework.security.core.userdetails.UserDetails;\r\nimport org.springframework.security.core.userdetails.UserDetailsService;\r\nimport org.springframework.security.provisioning.InMemoryUserDetailsManager;\r\nimport org.springframework.security.web.SecurityFilterChain;\r\nimport org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;\r\n\r\n\r\n@SpringBootApplication\r\n@EnableMethodSecurity\r\npublic class SecurityDemoApplication {\r\n    public static void main(String[] args) {\r\n        SpringApplication.run(SecurityDemoApplication.class, args);\r\n    }\r\n\r\n    @Bean\r\n    public UserDetailsService userDetailsService() {\r\n        UserDetails user = User.withUsername(\"user\")\r\n                .password(\"{noop}password\") // No encoding\r\n                .roles(\"USER\")\r\n                .build();\r\n\r\n        UserDetails admin = User.withUsername(\"admin\")\r\n                .password(\"{noop}adminpass\")\r\n                .roles(\"ADMIN\")\r\n                .build();\r\n\r\n        return new InMemoryUserDetailsManager(user, admin);\r\n    }\r\n\r\n    @Bean\r\n    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {\r\n        http\r\n                .authorizeHttpRequests(auth -> auth\r\n                        .requestMatchers(\"/api/login\").permitAll()\r\n                        .anyRequest().authenticated()\r\n                )\r\n                .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)\r\n                .csrf(AbstractHttpConfigurer::disable) // Disable CSRF for testing\r\n                .formLogin(AbstractHttpConfigurer::disable) // Updated way to disable form login\r\n                .httpBasic(AbstractHttpConfigurer::disable); // Updated way to disable basic auth\r\n\r\n        return http.build();\r\n    }\r\n\r\n    @Bean\r\n    public JwtAuthenticationFilter jwtAuthenticationFilter() {\r\n        return new JwtAuthenticationFilter();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/SecurityDemo/src/main/java/com/securitydemo/SecurityDemoApplication.java b/SecurityDemo/src/main/java/com/securitydemo/SecurityDemoApplication.java
+--- a/SecurityDemo/src/main/java/com/securitydemo/SecurityDemoApplication.java	(revision 2949cf7f4a4b83eb79c118bd493f996a60455bf4)
++++ b/SecurityDemo/src/main/java/com/securitydemo/SecurityDemoApplication.java	(date 1741295750831)
+@@ -4,8 +4,10 @@
+ import org.springframework.boot.SpringApplication;
+ import org.springframework.boot.autoconfigure.SpringBootApplication;
+ import org.springframework.context.annotation.Bean;
++import org.springframework.context.annotation.Profile;
+ import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
++import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+ import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+ import org.springframework.security.core.userdetails.User;
+ import org.springframework.security.core.userdetails.UserDetails;
+@@ -15,8 +17,9 @@
+ import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+ 
+ 
+-@SpringBootApplication
++@SpringBootApplication(scanBasePackages = "com.securitydemo")
+ @EnableMethodSecurity
++@EnableWebSecurity
+ public class SecurityDemoApplication {
+     public static void main(String[] args) {
+         SpringApplication.run(SecurityDemoApplication.class, args);
+@@ -38,16 +41,33 @@
+     }
+ 
+     @Bean
+-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
++    @Profile("!lambda")
++    public SecurityFilterChain webSecurityFilterChain(HttpSecurity http) throws Exception {
+         http
+                 .authorizeHttpRequests(auth -> auth
+                         .requestMatchers("/api/login").permitAll()
+                         .anyRequest().authenticated()
+                 )
+                 .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
+-                .csrf(AbstractHttpConfigurer::disable) // Disable CSRF for testing
+-                .formLogin(AbstractHttpConfigurer::disable) // Updated way to disable form login
+-                .httpBasic(AbstractHttpConfigurer::disable); // Updated way to disable basic auth
++                .csrf(AbstractHttpConfigurer::disable)
++                .formLogin(AbstractHttpConfigurer::disable)
++                .httpBasic(AbstractHttpConfigurer::disable);
++
++        return http.build();
++    }
++
++    @Bean
++    @Profile("lambda")
++    public SecurityFilterChain lambdaSecurityFilterChain(HttpSecurity http) throws Exception {
++        http
++                .authorizeHttpRequests(auth -> auth
++                        .requestMatchers("/api/login").permitAll()
++                        .anyRequest().permitAll()
++                )
++                .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
++                .csrf(AbstractHttpConfigurer::disable)
++                .formLogin(AbstractHttpConfigurer::disable)
++                .httpBasic(AbstractHttpConfigurer::disable);
+ 
+         return http.build();
+     }
+@@ -56,4 +76,4 @@
+     public JwtAuthenticationFilter jwtAuthenticationFilter() {
+         return new JwtAuthenticationFilter();
+     }
+-}
++}
+\ No newline at end of file
+Index: SecurityDemo/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'java'\r\n    id 'org.springframework.boot' version '3.4.3'\r\n    id 'io.spring.dependency-management' version '1.1.7'\r\n}\r\n\r\ngroup = 'com'\r\nversion = '0.0.1-SNAPSHOT'\r\n\r\njava {\r\n    toolchain {\r\n        languageVersion = JavaLanguageVersion.of(17)\r\n    }\r\n}\r\n\r\nrepositories {\r\n    mavenCentral()\r\n}\r\n\r\ndependencies {\r\n    implementation 'org.springframework.boot:spring-boot-starter-security'\r\n    implementation 'org.springframework.boot:spring-boot-starter-web'\r\n    testImplementation 'org.springframework.boot:spring-boot-starter-test'\r\n    testImplementation 'org.springframework.security:spring-security-test'\r\n    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'\r\n    implementation 'org.springframework:spring-test'\r\n\r\n    implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'\r\n    implementation 'com.amazonaws:aws-lambda-java-events:3.11.2'\r\n    implementation 'org.springframework.cloud:spring-cloud-function-adapter-aws:3.2.2'\r\n    implementation 'org.springframework.cloud:spring-cloud-function-web:3.2.2'\r\n\r\n    implementation 'com.fasterxml.jackson.core:jackson-databind'\r\n\r\n    implementation 'ch.qos.logback:logback-classic'\r\n\r\n    runtimeOnly 'org.springframework.boot:spring-boot-starter-tomcat'\r\n\r\n}\r\n\r\ntasks.named('test') {\r\n    useJUnitPlatform()\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/SecurityDemo/build.gradle b/SecurityDemo/build.gradle
+--- a/SecurityDemo/build.gradle	(revision 2949cf7f4a4b83eb79c118bd493f996a60455bf4)
++++ b/SecurityDemo/build.gradle	(date 1741293144375)
+@@ -27,17 +27,46 @@
+ 
+     implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
+     implementation 'com.amazonaws:aws-lambda-java-events:3.11.2'
+-    implementation 'org.springframework.cloud:spring-cloud-function-adapter-aws:3.2.2'
+-    implementation 'org.springframework.cloud:spring-cloud-function-web:3.2.2'
++
++    // Actualización de las dependencias de Spring Cloud Function
++    implementation 'org.springframework.cloud:spring-cloud-function-adapter-aws:4.0.5'
++    implementation 'org.springframework.cloud:spring-cloud-starter-function-web:4.0.5'
+ 
+     implementation 'com.fasterxml.jackson.core:jackson-databind'
+ 
+     implementation 'ch.qos.logback:logback-classic'
+-
+-    runtimeOnly 'org.springframework.boot:spring-boot-starter-tomcat'
+-
+ }
+ 
+ tasks.named('test') {
+     useJUnitPlatform()
+ }
++
++// Tarea para crear un ZIP con las dependencias y clases separadas (formato AWS Lambda tradicional)
++task buildZip(type: Zip) {
++    archiveFileName = "SecurityDemo-${version}.zip"
++    destinationDirectory = file("${buildDir}/distributions")
++
++    into('lib') {
++        from(configurations.runtimeClasspath)
++    }
++    into('classes') {
++        from compileJava
++        from processResources
++    }
++}
++
++// Tarea para crear un JAR fat con todas las dependencias incluidas
++task buildFatJar(type: Jar) {
++    archiveFileName = "SecurityDemo-${version}-all.jar"
++    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
++    manifest {
++        attributes('Main-Class': 'com.securitydemo.SecurityDemoApplication')
++    }
++    from {
++        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
++    }
++    with jar
++}
++
++// Hacer que la tarea build dependa de buildFatJar para que se ejecute automáticamente
++build.dependsOn buildFatJar
+\ No newline at end of file
+Index: SecurityDemo/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.application.name=SecurityDemo\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/SecurityDemo/src/main/resources/application.properties b/SecurityDemo/src/main/resources/application.properties
+--- a/SecurityDemo/src/main/resources/application.properties	(revision 2949cf7f4a4b83eb79c118bd493f996a60455bf4)
++++ b/SecurityDemo/src/main/resources/application.properties	(date 1741295214156)
+@@ -1,1 +1,2 @@
+ spring.application.name=SecurityDemo
++spring.main.web-application-type=servlet
+\ No newline at end of file
+Index: SecurityDemo/src/main/resources/application-lambda.properties
+===================================================================
+diff --git a/SecurityDemo/src/main/resources/application-lambda.properties b/SecurityDemo/src/main/resources/application-lambda.properties
+new file mode 100644
+--- /dev/null	(date 1741295220207)
++++ b/SecurityDemo/src/main/resources/application-lambda.properties	(date 1741295220207)
+@@ -0,0 +1,2 @@
++spring.main.web-application-type=servlet
++spring.profiles.active=lambda
+\ No newline at end of file
